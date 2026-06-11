@@ -1,0 +1,66 @@
+# Animations
+
+## important
+- starting point
+- endding point
+- duration
+- easing
+- path of the Animations 
+
+## Web animatimations
+- CSS animatimations
+- JS animatimations
+
+## Animation library
+- GSAP
+    - most used
+    - simple 
+    - optimazation to an extent by itself
+
+## Basic syntax
+    
+    gsap.method("element", {properties});
+
+## methods
+- gsap.to() -> Goes from starting point(default) to ending.
+    - example syntax -> gsap.to(".box", {
+                        delay: 0.6,
+                        x: 300,
+                        duration: 1,
+                      });
+
+- gsap.from() -> Goes from ending point to starting point(default).
+    - example syntax -> gsap.from(".box", {
+                        delay: 0.6,
+                        x: 300,
+                        duration: 1,
+                      });
+
+- gsap.fromTo() -> can give both states starting and ending so the animation will move from given starting point to given ending point.
+    - example syntax -> gsap.fromTo(".box", {
+                            x: 0,
+                        }, {
+                            duration: 1,
+                            delay: 0.6,
+                            x:400
+                        });
+
+- gsap.set() -> method is used to immediately set properties of an element without any animation.
+    - usually used for setting the initial desired state for any animation to start the animation
+    - example syntax -> gsap.set(".box", {
+                            x: 200,
+                            y: 100,
+                            opacity: 0.5,
+                            scale: 2
+                        });
+
+- to select multiple elements
+    - gsap.to([".box", ".box2"], {properties});
+
+- Custome property 
+    const obj = {
+            a: 0,
+        }
+    gsap.to(obj, {
+        a: 100
+    })
