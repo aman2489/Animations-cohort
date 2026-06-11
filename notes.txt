@@ -64,3 +64,36 @@
     gsap.to(obj, {
         a: 100
     })
+
+
+- repeat property 
+    - repeat: 2 -> it will run the animation 3 time one time it will run default and it will repeat 2 times
+    - repeat: -1 -> infite repeat
+
+
+- stagger -> if a class given and multiple elements have same class it will run the animations one by one in sequence, reverse order random or center
+    - It takes time as its value or object if you want to give direction as well
+    - example syntax -> gsap.from("h1 span", {
+                            yPercent: 100,
+                            duration: 1.5,
+                            ease: "expo.out",
+                            stagger: {
+                                each: 0.08,
+                                from: "random"
+                            },
+                            opacity: 0
+                        })
+
+
+- timeline -> we can run sequence of animations with this by creating a timeline and then chaining animations one after another
+    - very useful when you want to run different animations in a desired seqence
+
+    - position parameter
+        - "<" -> It animate the current element with the previous element chained in the timeline, both will animate simultaneously.
+            - "<0.2" -> it means the delay of 0.2s will be added so it will run after the delay of 0.2s of its previous animation in timeline
+        - "-=0.3" -> It will run the current animation 0.3s before its previous animation ending time, so it mean ED of prev. animation - 0.3s
+        - "+=0.3" -> It will simply add 0.3s in ending time
+        - labels -> It basically is like giving a lable to animation in position parameter and the animations with same parameters will run at same time.
+            for exmaple if i have given A1 and A4 lable "aman" both will run at same time
+            - "aman-=0.2" -> this will run the animation of that perticular element run 0.2seconds earlier, it will reduce 0.2 seconds from the starting time of the label starting time
+            - "aman+0.2" -> and it will do reverse of above act as delay

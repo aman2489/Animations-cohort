@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app{
+  height: 100%;
+  width: 100%;
+  background-color: #010101;
+}
+
+
+.box{
+  height: 150px;
+  width: 150px;
+  background-color: crimson;
+  margin-bottom: 0.5rem;
+}
+
+#app{
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+#heading{
+  color: whitesmoke;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+h1{
+  font-size: 8rem;
+  overflow: hidden;
+}
+
+span{
+  display: inline-block;
+}
+
+.box1{
+  background-color: red;
+}
+.box2{
+  background-color: green;
+}
+.box3{
+  background-color: blue;
+}
+.box4{
+  background-color: purple;
+}
