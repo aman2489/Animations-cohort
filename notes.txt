@@ -92,7 +92,7 @@
         - "<" -> It animate the current element with the previous element chained in the timeline, both will animate simultaneously.
             - "<0.2" -> it means the delay of 0.2s will be added so it will run after the delay of 0.2s of its previous animation in timeline
         - "-=0.3" -> It will run the current animation 0.3s before its previous animation ending time, so it mean ED of prev. animation - 0.3s
-        - "+=0.3" -> It will simply add 0.3s in ending time
+        - "+=0.3" -> It will simply add 0.3s in ending time, it will add delay of 0.3s in current animation applied to.
         - labels -> It basically is like giving a lable to animation in position parameter and the animations with same parameters will run at same time.
             for exmaple if i have given A1 and A4 lable "aman" both will run at same time
             - "aman-=0.2" -> this will run the animation of that perticular element run 0.2seconds earlier, it will reduce 0.2 seconds from the starting time of the label starting time
