@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root{
+  height: 100%;
+  width: 100%;
+  background-color: #010101;
+}
+
+#root{
+  padding: 1rem;
+}
+
+.box{
+  height: 150px;
+  width: 150px;
+  background-color: crimson;
+  margin-bottom: 1rem;
+}
+
+.page{
+  height: 100%;
+  width: 100%;
+}

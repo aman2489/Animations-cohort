@@ -1,0 +1,86 @@
+Motion (earlier Framer Motion)
+
+- Made for react.
+
+- 3 import things to do:
+    - initial -> initial properties of element or animation, starting point states.
+    - animate -> final properties, kind of like final states of animation.
+    - transition -> transition properties like duration, ease, repeat and more...
+
+- motion tags
+    - motion.div
+    - motion.span
+    - motion.p
+    - motion.h2
+    - motion.ul
+    - motion.li
+    - etc......
+
+- Gesture Trigger
+    - whileHover -> animations on whileHover
+    - whileTap -> animation on click
+    - whileOnView -> properties for animating on view
+    - viewport -> properties should run once or more and on how much visibilty of object.
+
+- variants
+    - to create the animations the data saved in an object and then object passed as variant in motion element
+    - then the data keys passed as we desire
+    - example: const boxVariants = {
+                    hidden: {
+                        opacity: 0,
+                        scale: 0.7
+                    },
+                    visible: {
+                        opacity: 1,
+                        scale: 1, 
+                        x: 500
+                    }
+                }
+
+                return (
+                    <>
+                        <motion.div
+                            variants={boxVariants}
+                            initial="hidden"
+                            transition={{duration: 1, ease: "easeInOut"}} 
+                            animate="visible"
+                            //  whileHover={{scale: 1.2}}
+                            //  whileTap={{scale: 0.8}}
+                            //  viewport={{once: false, amount: 0.5}}
+                            //  whileInView={{opacity: 1, scale: 1}}
+                        className="box"></motion.div>
+                        
+                        <motion.div
+                            variants={boxVariants}
+                            initial="hidden"
+                            transition={{duration: 1, ease: "easeInOut"}} 
+                            animate="visible"
+                        className="box"></motion.div>
+                    </>
+                )
+
+    - stagger in can be used by wrapping elements in parent div and giving staggerChildren intransition property.
+        exmample: <div
+                    variants={conatinerVariant}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{staggerChildren: 0.2}}
+                    ><div>
+
+- animate presence
+    - used to make the animations of elements which mount and unmounts
+    - example: 
+                const [show, setShow] = useState(false);
+
+                <motion.button
+                onClick={() => {setShow(prev => !prev)}}
+                >Click Me</motion.button>
+
+                <AnimatePresence>
+                    {show && <motion.div
+                        initial={{opacity: 0, y: 200}}
+                        animate={{opacity: 1, y: 0}}
+                        transition={{duration: 0.8}}
+                        exit={{opacity: 0, y: 200}}         
+                        className="box"></motion.div>}
+                </AnimatePresence>
