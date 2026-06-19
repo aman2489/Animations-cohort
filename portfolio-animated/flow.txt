@@ -1,0 +1,13 @@
+
+* raf cannot be given to functional component
+
+- forward ref -> use to pass reference from child to parent
+
+
+- Text reveal component
+    - text split
+    - trigger
+        - mount
+        - scroll
+        - manual
+
