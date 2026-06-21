@@ -1,2 +1,63 @@
 @import "tailwindcss";
 
+:root {
+  --inter: var(--font-inter);
+  --jet-brains: var(--font-jetbrains-mono);
+
+   /* foundation */
+  --background: #F3F0EA;
+  --foreground: #141414;
+
+  /* surfaces */
+  --surface: #E8E3DA;
+  --surface-dark: #0B0B0B;
+
+  /* typography */
+  --primary-text: #141414;
+  --secondary-text: #6F6A62;
+
+  /* premium accent */
+  --accent: #B08D57;
+  --accent-soft: #7A623E;
+
+  /* details */
+  --border: rgba(20,20,20,0.12);
+
+  /* transition */
+  --transition-strip: #050505;
+}
+
+h1,
+span,
+h3 {
+  font-family: var(--jet-brains);
+}
+
+h2,
+p,
+h4 {
+  font-family: var(--inter);
+}
+
+body {
+ background: var(--background);
+ color: var(--primary-text);
+}
+
+.logo{
+    letter-spacing:0.08em;
+    color:var(--accent);
+}
+
+.nav-link{
+    color:var(--secondary-text);
+}
+
+.nav-link:hover{
+ color:var(--foreground);
+}
+
+.number{
+ color:var(--accent);
+}
+

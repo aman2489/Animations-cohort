@@ -17,6 +17,7 @@ const TextReveal = forwardRef(
       stagger = "0.085",
       delay = 0,
       ease = "power3.out",
+      ...props
     },
     ref,
   ) => {
@@ -97,7 +98,7 @@ const TextReveal = forwardRef(
     );
 
     return (
-      <div ref={wrapperRef} className={`overflow-hidden ${className}`}>
+      <div ref={wrapperRef} className={`overflow-hidden ${className}`} {...props}>
         {children}
       </div>
     );

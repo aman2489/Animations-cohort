@@ -1,8 +1,12 @@
 
-const page = () => {
+const page = async ({params}) => {
+
+  const {slug} = await params;
+
+
   return (
     <div>
-        <h1>project details section</h1>      
+        <h1>project details section, {slug}</h1>      
     </div>
   )
 }
