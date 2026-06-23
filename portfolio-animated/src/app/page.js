@@ -7,15 +7,15 @@ import { useRef } from "react";
 export default function Home() {
 
 
-  const handleHoverEnter = () => {
-    triggerRef.current.play();
-  }
+  // const handleHoverEnter = () => {
+  //   triggerRef.current.play();
+  // }
 
-  const handleHoverLeave = () => {
-    triggerRef.current.reverse();
-  }
+  // const handleHoverLeave = () => {
+  //   triggerRef.current.reverse();
+  // }
 
-  const triggerRef = useRef(null);
+  // const triggerRef = useRef(null);
   // return (
   //   <main className="h-[300vh] w-full">
   //   <div 

@@ -32,7 +32,7 @@ const InfiniteCarousel = ({ projects }) => {
 
   return (
     <div
-      style={{ padding: `${TRACK_H * 0.2}px 0 24px` }}
+      style={{ padding: `${TRACK_H * 0.08}px 0 24px` }}
       className="overflow-hidden"
     >
       <div

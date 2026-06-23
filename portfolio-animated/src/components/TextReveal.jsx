@@ -35,7 +35,8 @@ const TextReveal = forwardRef(
       () => {
         splitRef.current = new SplitText(wrapperRef.current, {
           type: splitBy,
-          lineTreshold: 0.3,
+          mask: splitBy,
+          lineThreshold: 0.3,
         });
 
         const elements = splitRef.current[splitBy];
